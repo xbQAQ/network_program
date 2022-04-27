@@ -1,0 +1,48 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUFFER_SIZE	./epoll_nonblock.c	22;"	d	file:
+BUFSIZE	./multiprocessing.c	21;"	d	file:
+BUFSIZE	./multipthreading.c	22;"	d	file:
+BUFSIZE	./reactor.c	22;"	d	file:
+BUFSIZE	./select.c	20;"	d	file:
+BUF_SIZE	./client.cpp	14;"	d	file:
+BUF_SIZE	./service.cpp	14;"	d	file:
+MAX_EVENTS	./reactor.c	21;"	d	file:
+MAX_EVENT_NUMBER	./epoll_nonblock.c	21;"	d	file:
+SERV_PORT	./reactor.c	23;"	d	file:
+acceptconn	./reactor.c	/^void acceptconn(int lfd, int events, void* arg) {$/;"	f
+addfd	./epoll_nonblock.c	/^void addfd(int epollfd, int fd, int enable_et){$/;"	f
+arg	./reactor.c	/^    void* arg;                                              \/\/泛型参数$/;"	m	struct:myevent_s	file:
+buf	./reactor.c	/^    char buf[BUFSIZE];$/;"	m	struct:myevent_s	file:
+callback	./reactor.c	/^    void (*callback)(int fd, int events, void* arg);        \/\/回调函数$/;"	m	struct:myevent_s	file:
+et	./epoll_nonblock.c	/^void et(struct epoll_event* events, int number, int epollfd, int listenfd){$/;"	f
+eventadd	./reactor.c	/^void eventadd(int epfd, int events, struct myevent_s* ev){$/;"	f
+eventdel	./reactor.c	/^void eventdel(int epfd, struct myevent_s* ev){$/;"	f
+events	./reactor.c	/^    int events;                                             \/\/对应的监听事件$/;"	m	struct:myevent_s	file:
+eventset	./reactor.c	/^void eventset(struct myevent_s* ev, int fd, void(*callback)(int, int, void*), void* arg){$/;"	f
+fd	./reactor.c	/^    int fd;                                                 \/\/要监听的文件描述符$/;"	m	struct:myevent_s	file:
+g_efd	./reactor.c	/^int g_efd;                                                  \/\/全局变量, 保存epoll_create返回的文件描述符$/;"	v
+g_events	./reactor.c	/^struct myevent_s g_events[MAX_EVENTS + 1];                  \/\/自定义结构体类型数组. +1-->listen fd$/;"	v	typeref:struct:myevent_s
+initlistensocket	./reactor.c	/^void initlistensocket(int epfd, short port){$/;"	f
+last_active	./reactor.c	/^    long last_active;                                       \/\/记录每次加入红黑树 g_efd 的时间值$/;"	m	struct:myevent_s	file:
+length	./reactor.c	/^    int length; $/;"	m	struct:myevent_s	file:
+lt	./epoll_nonblock.c	/^void lt(struct epoll_event* events, int number, int epollfd, int listenfd){$/;"	f
+main	./client.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	./epoll.c	/^int main(){$/;"	f
+main	./epoll_nonblock.c	/^int main(){$/;"	f
+main	./multiprocessing.c	/^int main(int argc, char* argv[]){$/;"	f
+main	./multipthreading.c	/^int main(int argc, char **argv){$/;"	f
+main	./reactor.c	/^int main(int argc, char **argv){$/;"	f
+main	./select.c	/^int main(){$/;"	f
+main	./service.cpp	/^int main(int argc, char* argv[])$/;"	f
+myevent_s	./reactor.c	/^struct myevent_s{$/;"	s	file:
+recvdata	./reactor.c	/^void recvdata(int fd, int events, void* arg){$/;"	f
+senddata	./reactor.c	/^void senddata(int fd, int events, void* arg){$/;"	f
+setnonblocking	./epoll_nonblock.c	/^int setnonblocking(int fd){$/;"	f
+status	./reactor.c	/^    int status;                                             \/\/是否在监听:1->在红黑树上(监听), 0->不在(不监听)$/;"	m	struct:myevent_s	file:
+thread_client	./multipthreading.c	/^void* thread_client(void* arg){$/;"	f
+waitchild	./multiprocessing.c	/^void waitchild(int signum){$/;"	f
